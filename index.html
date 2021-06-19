@@ -21,7 +21,7 @@
                     <div class="brand">
                         <a href="/index.html"><img src="/imgs/pisces.png"></a>
                     </div>
-                    <div class="nav-list">
+                    <div class="nav-list nav-normal">
                         <ul>
                             <li><a href="#contact">CONTACT</a></li>                            
                             <li><a href="#projects">PROJECTS</a></li>
@@ -29,6 +29,9 @@
                             <li><a href="#hero">ABOUT ME</a></li>
                         </ul>
                     </div>
+                    <button class="navbar-toggler" type="button" onclick="collapse_nav()">
+                        <img src="/imgs/burger_btn.png">
+                    </button>
                 </div>
             </div>            
         </section>
@@ -38,7 +41,7 @@
             <div class="container inner">
                 <div class="ma_name">
                     <h1>Hello,<br>My Name Is<br><span>Juliana</span></h1>
-                    <p>I'm an I.P and I.T lawyer and developer,<br>passionate about Backend development and Data Science.</p>
+                    <p>I'm an Intellectual Property / Information Technology lawyer and developer,<br>passionate about Backend development and Data Science.</p>
                 </div>
                 <div class="cubes">
                     <div class="cards">
@@ -46,7 +49,7 @@
                         </div>
                         <div class="description">
                             <h3><span>L</span>aw</h3>
-                            <p>I'm a colombian lawyer, magister in Intelectual Property law and Information technology law,
+                            <p>I'm a colombian lawyer, magister in Intellectual Property law and Information technology law,
                                 having knowledge from copyright, to Antitrust law and personal data protection.</p>
                         </div>
                     </div>
@@ -163,6 +166,15 @@
                     window.location.href='http://disciplinapp-env.eba-d2puts6q.sa-east-1.elasticbeanstalk.com';
                 }
             };
+            function collapse_nav() {
+                const nav = document.querySelector(".nav-list");
+                if(nav.className === "nav-list nav-normal"){
+                    nav.className = "nav-list nav-collapsed";
+                }
+                else{
+                    nav.className = "nav-list nav-normal";
+                }
+            };      
         </script>
     </body>
 </html>
