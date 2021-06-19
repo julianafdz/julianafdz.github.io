@@ -95,7 +95,7 @@
                     <h2><span>P</span>rojects</h2>
                 </div>
                 <div class="cubes">
-                    <div class="projects_card" onclick="window.location.href='//www.github.com/julianafdz'">
+                    <div class="projects_card" id="git" onclick="redirect(this)">
                         <div class="github icon">
                         </div>
                         <div class="description">
@@ -104,7 +104,7 @@
                                 all my CS50's projects, about Machine Learning and Web Design.</p>
                         </div>
                     </div>
-                    <div class="projects_card" onclick="window.location.href='//disciplinapp-env.eba-d2puts6q.sa-east-1.elasticbeanstalk.com'">
+                    <div class="projects_card" id="disapp" onclick="redirect(this)">
                         <div class="disciplinapp icon">                            
                         </div>
                         <div class="description">
@@ -154,6 +154,14 @@
                     sizeVariations: 1,
                     speed: 1,
                 });
+            };
+            function redirect(element) {
+                if (element.id === 'git') {
+                    window.location.href='https://www.github.com/julianafdz';                    
+                }
+                else if (element.id === 'disapp') {
+                    window.location.href='http://disciplinapp-env.eba-d2puts6q.sa-east-1.elasticbeanstalk.com';
+                }
             };
         </script>
     </body>
